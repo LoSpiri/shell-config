@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # requirements
-./requirements.sh
+./bin/requirements.sh
 # filesystem
-./filesystem.sh
+./bin/filesystem.sh
 # zsh and oh-my-zsh
-./zsh.sh
+./bin/zsh.sh
 # p10k
-./aesthetic.sh
+./bin/aesthetic.sh
 # miniconda
-./miniconda.sh
+./bin/miniconda.sh
 # kitty
-./kitty.sh
+./bin/kitty.sh
 
 # TODOS
 # vscode config
