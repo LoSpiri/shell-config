@@ -13,4 +13,7 @@
 # kitty
 ./kitty.sh
 
+# TODOS
+# vscode config
+
 /usr/bin/zsh

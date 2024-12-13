@@ -6,7 +6,8 @@ if ! command -v conda &> /dev/null; then
     source ~/.bashrc
     conda create -n misc 
 else
-    echo "Conda is already installed, version: $(conda --version)"
+    echo "Conda is already installed. Skipping."
+    echo "Conda version: $(conda --version)"
 fi
 
 echo "----------------"

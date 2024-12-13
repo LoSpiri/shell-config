@@ -2,7 +2,7 @@
 
 # fonts
 FONT_DIR=~/.local/share/fonts/
-echo "Moving fonts to $FONT_DIR"
+STOP_AND_SET_FONT=1
 
 if [ ! -d "$FONT_DIR" ]; then
     mkdir -p "$FONT_DIR"
@@ -11,17 +11,13 @@ fi
 for font in ../fonts/*; do
     if [ ! -e "$FONT_DIR/$(basename "$font")" ]; then
         cp "$font" "$FONT_DIR"
-        echo "Moved: $font"
-    else
-        echo "Font $(basename "$font") already exists. Skipping..."
+        echo "Added font: $font"
     fi
 done
-if [STOP_AND_SET_FONT eq 0]
+if [ "$STOP_AND_SET_FONT" -eq 0 ]; then
     echo "Set font from preferences and re-run"
     exit
 fi
-echo "Refreshing font cache..."
-fc-cache -fv
 
 # copy dotfiles
 ZSH_CONFIG=~/.zshrc
