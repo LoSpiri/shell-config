@@ -10,5 +10,7 @@
 ./aesthetic.sh
 # miniconda
 ./miniconda.sh
+# kitty
+./kitty.sh
 
 /usr/bin/zsh

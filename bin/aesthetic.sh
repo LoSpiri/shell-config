@@ -2,7 +2,7 @@
 
 # fonts
 FONT_DIR=~/.local/share/fonts/
-echo "Moving fonts to $FONT_DIR..."
+echo "Moving fonts to $FONT_DIR"
 
 if [ ! -d "$FONT_DIR" ]; then
     mkdir -p "$FONT_DIR"
