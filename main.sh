@@ -12,6 +12,8 @@
 ./bin/miniconda.sh
 # kitty
 ./bin/kitty.sh
+# docker
+./bin/docker.sh
 
 # TODOS
 # vscode config

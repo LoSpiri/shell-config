@@ -1,7 +1,7 @@
 #!/bin/bash
 
+# BEGIN CONFIG BY DOCS >>>
 if command -v kitty.app >/dev/null 2>&1; then
-    # BEGIN CONFIG BY DOCS >>>
     curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n
     # Create symbolic links to add kitty and kitten to PATH (assuming ~/.local/bin is in your system-wide PATH)
     sudo ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten /usr/local/bin/
@@ -14,10 +14,10 @@ if command -v kitty.app >/dev/null 2>&1; then
     sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
     # Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
     echo 'kitty.desktop' > ~/.config/xdg-terminals.list
-    # <<< END CONFIG BY DOCS
 else
     echo "Kitty is already installed. Skipping."
 fi
+# <<< END CONFIG BY DOCS
 
 # kitty.conf
 KITTY_CONFIG=~/.config/kitty/kitty.conf
@@ -40,3 +40,5 @@ if [ ! -e "$KITTY_CONFIG" ]; then
 else
     echo "kitty.conf already exists. Skipping copy."
 fi
+
+echo "----------------"

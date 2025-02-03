@@ -12,7 +12,7 @@ else
     echo "Dotfile user-dirs.dirs not found. Skipping."
 fi
 
-for dir in ~/Documents ~/Desktop ~/Music ~/Public ~/Templates ~/Videos; do
+for dir in ~/Desktop ~/Music ~/Public ~/Templates ~/Videos; do
     if [ -d "$dir" ]; then
         rm -r "$dir"
         echo "Removed $dir."
@@ -41,6 +41,17 @@ if [ -d ~/Pictures ]; then
     fi
 else
     echo "Pictures directory does not exist. Skipping rename."
+fi
+
+if [ -d ~/Documents ]; then
+    if [ ! -d ~/documents ]; then
+        mv ~/Documents ~/documents
+        echo "Renamed Documents to documents."
+    else
+        echo "documents directory already exists. Skipping rename."
+    fi
+else
+    echo "Documents directory does not exist. Skipping rename."
 fi
 
 echo "----------------"

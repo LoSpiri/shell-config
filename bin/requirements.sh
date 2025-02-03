@@ -28,4 +28,13 @@ else
     echo "neofetch is already installed. Skipping."
 fi
 
+# vlc
+if ! dpkg -l | grep -q vlc; then
+    sudo apt install -y vlc
+else
+    echo "vlc is already installed. Skipping."
+fi
+
+# sudo apt install gnome-shell-extension-gpaste
+
 echo "----------------"
